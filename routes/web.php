@@ -21,6 +21,6 @@ Route::get('/tavern', function () {
     return view('tavern');
 });
 
-Route::post('/fight', function () {
+Route::post('/dragonfight', function () {
     return "You defeated the dragon!";
 });

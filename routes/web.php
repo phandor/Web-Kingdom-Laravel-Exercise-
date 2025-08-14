@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OverviewController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -23,4 +24,9 @@ Route::get('/tavern', function () {
 
 Route::post('/dragonfight', function () {
     return "You defeated the dragon!";
+});
+
+Route::controller(OverviewController::class)->group(function(){
+    Route::get('/overview', 'index');
+    Route::get('/inventory', 'getInventory');
 });
